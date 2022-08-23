@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components';
 
 function App() {
+
+  let numerodeclase = 3
+
   return (
+    <>
+    <NavBar/>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          BIENVENIDOS!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          NIKE AR
-        </a>
-      </header>
+      <p style={
+        {
+          color:"red",
+          fontsize: "100px",
+          margin: "25px",
+        }
+      }>
+      BIENVENIDO a la clase {numerodeclase}
+      </p>
+      <input placeholder="ingrese comentario"/>
+
     </div>
+    </>
   );
 }
 
