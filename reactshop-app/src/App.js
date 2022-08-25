@@ -4,10 +4,11 @@ import NavBar from './components';
 function App() {
 
   let numerodeclase = 3
+  const categorias = ["genero", "NBA", "Jordan"]
 
   return (
     <>
-    <NavBar/>
+    <NavBar categorias={categorias}/>
     <div className="App">
       <p style={
         {
