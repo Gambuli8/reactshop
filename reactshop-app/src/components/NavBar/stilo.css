@@ -2,6 +2,7 @@
 .navbar {
     height: 100px;
     color: black;
+    background-color: #555;
 }
 
 ul {

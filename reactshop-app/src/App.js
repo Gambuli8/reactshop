@@ -8,10 +8,10 @@ function App() {
 
   return (
     <>
-
-    <NavBar categorias={categorias}/>
+    <NavBar 
+      categorias={categorias}/>
     
-    <ItemListContainer greeting={"hola"} />
+    <ItemListContainer greeting={"Hola Bienvenido a Nike"}/>
     </>
   );
 }

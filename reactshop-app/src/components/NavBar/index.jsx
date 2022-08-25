@@ -1,5 +1,6 @@
 //rafce => funcion flecha
 import React from 'react';
+import CartWidget from '../CartWidget';
 import './stilo.css';
 
 const NavBar = (propiedades) => {
@@ -10,8 +11,9 @@ const NavBar = (propiedades) => {
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></link>
         <div>
             <nav className="navbar">
-            <div class="container-fluid">
-            <ul className="">
+            <div className="container-fluid">
+                <CartWidget/>
+            <ul>
                 <li className="lista">
                     <a href="/#" className="palabra">HOME</a>
                 </li>
