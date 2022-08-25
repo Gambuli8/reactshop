@@ -1,27 +1,17 @@
 import './App.css';
-import NavBar from './components';
+import NavBar from './components/NavBar';
+import ItemListContainer from './containers/ItemListContainer';
 
 function App() {
 
-  let numerodeclase = 3
   const categorias = ["genero", "NBA", "Jordan"]
 
   return (
     <>
-    <NavBar categorias={categorias}/>
-    <div className="App">
-      <p style={
-        {
-          color:"red",
-          fontsize: "100px",
-          margin: "25px",
-        }
-      }>
-      BIENVENIDO a la clase {numerodeclase}
-      </p>
-      <input placeholder="ingrese comentario"/>
 
-    </div>
+    <NavBar categorias={categorias}/>
+    
+    <ItemListContainer greeting={"hola"} />
     </>
   );
 }
