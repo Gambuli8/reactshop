@@ -24,7 +24,6 @@ const NavBar = () => {
         <div>
             <div className="container-fluid">
                 <CartWidget/>
-                <Select handlecolor={onChangeColor} />
             <ul style={{
                 backgroundColor: navColor
             }}>
@@ -44,8 +43,8 @@ const NavBar = () => {
                 <li className="lista">
                     <a href="/#" className="palabra">MUJER</a>
                 </li>
-                
             </ul>
+            <Select handlecolor={onChangeColor} />
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"

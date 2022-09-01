@@ -10,8 +10,7 @@ function App() {
   return (
     <>
     <NavBar 
-      categorias={categorias}/>
-    
+      categorias={categorias} />
     <ItemListContainer greeting={"Hola Bienvenido a Nike"}/>
     </>
   );
