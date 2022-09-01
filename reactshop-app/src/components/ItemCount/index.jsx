@@ -13,18 +13,31 @@ import './style.css';
         }
     }
 
-    const handleDecrement = 
+    const handleDecrement = () => {
+        //desarrollo del decrement
+    }
+
+    const addCart = () => {
+        onAdd(count);
+        setCount(initial);
+    }
+
+    /*useEffect(()=> {
+        console.log("se monto el itemcount");
+    }, [])*/
 
     useEffect(()=> {
-        console.log("se monto el itemcount");
-    }, [])
+        console.log("se actualiza el estado!");
+    })
 
     return (
     <div>  
+        <button onClick={handleDecrement}>-</button>
         <h2>{count}</h2>
         <button id='mas' onClick={handleAdd}>+</button>
+        <button onClick={addCart}>agregar al carrito</button>
     </div>
-    )
-}
+    );
+};
 
 export default ItemCount;

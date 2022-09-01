@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { productos } from "../../components/data/productos";
-import { ItemCount } from "../../components/ItemCount";
+import { productos } from "../../data/productos";
+import ItemCount from "../../components/ItemCount";
 import ItemList from "../../components/ItemList/ItemList";
 import './styles.css';
 
@@ -32,13 +32,15 @@ const ItemListContainer = ({greeting}) => {
     }, [])
     console.log(productos);
 
-    /*const agregarAlCarrito = (cantidad) => {
-        console.log(cantidad);;
-        console.log('se agrego la cantidad $(cantidad) al carrito');
-    }*/
+    const agregarAlCarrito = (cantidad) => {
+        console.log(cantidad);
+        console.log(`Se agregó la cantidad ${cantidad} al carrito!`);
+    }
 
     return (
         <div className="Item-List-Container">
+            <h1>{greeting}</h1>
+            <ItemCount initial={1} stock={8} onAdd={agregarAlCarrito}/>
             <ItemList productos={products}/>
         </div>
     )
