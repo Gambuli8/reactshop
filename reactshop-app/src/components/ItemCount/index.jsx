@@ -21,14 +21,14 @@ import './style.css';
         onAdd(count);
         setCount(initial);
     }
-
-    /*useEffect(()=> {
+    /*
+    useEffect(()=> {
         console.log("se monto el itemcount");
     }, [])*/
 
     useEffect(()=> {
         console.log("se actualiza el estado!");
-    })
+    }, [count]);
 
     return (
     <div>  

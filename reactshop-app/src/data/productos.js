@@ -1,6 +1,6 @@
 export const productos = [
-    {id:1, stock:10, description:1, name:"produc1"},
-    {id:2, stock:3, description:2, name:"produc2"},
-    {id:3, stock:7, description:3, name:"produc3"},
-    {id:4, stock:5, description:4, name:"produc4"}
+    {id:1, stock:10, description:1, name:"Remera Jordan Sport"},
+    {id:2, stock:10, description:2, name:"Pantalon Jordan Essentials"},
+    {id:3, stock:10, description:3, name:"Air Trainer 1"},
+    {id:4, stock:10, description:4, name:"Air Force 1 Mid x Stüssy"}
 ];

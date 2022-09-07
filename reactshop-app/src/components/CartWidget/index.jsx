@@ -7,7 +7,7 @@ const CartWidget = () => {
             width:"70px",
             height:"70px",
         }}>
-            <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+            <i class="fa-solid fa-cart-shopping"></i>
         </div>
     )
 }

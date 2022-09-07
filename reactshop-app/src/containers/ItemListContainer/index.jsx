@@ -10,18 +10,18 @@ import './styles.css';
 const ItemListContainer = ({greeting}) => {
 
     const [products, setproducts] = useState([])
-
+    
     useEffect(()=> {
         ( async()=> {
         const obtenerproductos = new Promise ((accept, reject)=> {
             setTimeout(()=> {
                 accept(productos)
-            }, 3000);
+            }, 50000);
         })
 
         try {
-            const response = obtenerproductos;
-            setproducts(response)
+            const response = await obtenerproductos;
+            setproducts(response);
         } catch (error) {
             console.log(error);
             console.log("hubo un error");
@@ -31,7 +31,7 @@ const ItemListContainer = ({greeting}) => {
 
     }, [])
     console.log(productos);
-
+    
     const agregarAlCarrito = (cantidad) => {
         console.log(cantidad);
         console.log(`Se agregó la cantidad ${cantidad} al carrito!`);
