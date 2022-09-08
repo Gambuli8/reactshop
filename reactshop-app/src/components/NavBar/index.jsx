@@ -4,12 +4,13 @@ import { useState } from 'react';
 import CartWidget from '../CartWidget';
 import './stilo.css';
 import Select from '../seleccionar';
+import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
     
     //nombre de estado 
-    const [navColor, setNavColor] = useState("#f3f3f3")
+    const [navColor, setNavColor] = useState("white")
 
     const onChangeColor = (Event) => {
         const Color = Event.target.value;
@@ -20,31 +21,28 @@ const NavBar = () => {
     return (
         <>
         <div>
-            <nav className='navbar'>
-            <div className="">
-                <CartWidget/>
+            <nav className="navbar">
             <ul style={{
                 backgroundColor: navColor
             }}>
-                
+                <CartWidget/>
+            <Select handlecolor={onChangeColor} />
                 <li className="lista">
-                    <a href="/#" className="palabra">HOME</a>
+                    <Link to="/" className="palabra">HOME</Link>
                 </li>
                 <li className="lista">
-                    <a href="/#" className="palabra">CATEGORIAS</a>
+                    <Link to="/category" className="palabra">CATEGORIAS</Link>
                 </li>
                 <li className="lista">
-                    <a href="/#" className="palabra">MARCA</a>
+                    <Link to="/category/Marcas" className="palabra">MARCA</Link>
                 </li>
                 <li className="lista">
-                    <a href="/#" className="palabra">HOMBRE</a>
+                    <Link to="/category/Hombre" className="palabra">HOMBRE</Link>
                 </li>
                 <li className="lista">
-                    <a href="/#" className="palabra">MUJER</a>
+                    <Link to="/category/Mujer" className="palabra">MUJER</Link>
                 </li>
             </ul>
-            <Select handlecolor={onChangeColor} />
-            </div>
             </nav>
         </div>
         </>

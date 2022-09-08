@@ -14,17 +14,15 @@ import './style.css';
     }
 
     const handleDecrement = () => {
-        //desarrollo del decrement
+        if (count> stock) {
+            setCount(count-1);
+        }
     }
 
     const addCart = () => {
         onAdd(count);
         setCount(initial);
     }
-    /*
-    useEffect(()=> {
-        console.log("se monto el itemcount");
-    }, [])*/
 
     useEffect(()=> {
         console.log("se actualiza el estado!");
@@ -32,7 +30,7 @@ import './style.css';
 
     return (
     <div>  
-        <button onClick={handleDecrement}>-</button>
+        <button id='menos' onClick={handleDecrement}>-</button>
         <h2>{count}</h2>
         <button id='mas' onClick={handleAdd}>+</button>
         <button onClick={addCart}>agregar al carrito</button>

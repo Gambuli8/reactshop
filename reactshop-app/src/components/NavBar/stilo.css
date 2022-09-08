@@ -2,13 +2,12 @@
 .navbar {
     height: 100px;
     color: black;
-    background-color: #555;
 }
 
 ul {
     text-decoration: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     list-style-type: none;
     color: black;
 }

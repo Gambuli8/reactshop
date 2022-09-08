@@ -7,7 +7,7 @@ const Select = ({handleColor}) => {
             <option value="blue">blue</option>
             <option value="red">red</option>
             <option value="black">black</option>
-            <option value="#f3f3f3">default</option>
+            <option value="white">default</option>
         </select>
     );
 };

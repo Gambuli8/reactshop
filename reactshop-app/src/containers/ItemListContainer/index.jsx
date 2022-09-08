@@ -1,21 +1,22 @@
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
-import { productos } from "../../data/productos";
 import ItemCount from "../../components/ItemCount";
 import ItemList from "../../components/ItemList/ItemList";
 import './styles.css';
+import { useEffect } from "react";
 
 
 const ItemListContainer = ({greeting}) => {
 
     const [products, setproducts] = useState([])
-    
-    useEffect(()=> {
+
+
+
+    useEffect(() => {
         ( async()=> {
         const obtenerproductos = new Promise ((accept, reject)=> {
             setTimeout(()=> {
-                accept(productos)
+                accept(products)
             }, 50000);
         })
 
@@ -24,13 +25,11 @@ const ItemListContainer = ({greeting}) => {
             setproducts(response);
         } catch (error) {
             console.log(error);
-            console.log("hubo un error");
         }
 
         })()
-
-    }, [])
-    console.log(productos);
+        })
+    console.log(products);
     
     const agregarAlCarrito = (cantidad) => {
         console.log(cantidad);
