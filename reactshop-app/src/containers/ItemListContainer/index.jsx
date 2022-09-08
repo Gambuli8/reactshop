@@ -1,14 +1,15 @@
 import React from "react";
 import { useState } from "react";
 import ItemCount from "../../components/ItemCount";
-import ItemList from "../../components/ItemList/ItemList";
+import ItemList from "../../components/ItemList";
 import './styles.css';
+import products from "../../data/productos";
 import { useEffect } from "react";
 
 
 const ItemListContainer = ({greeting}) => {
 
-    const [products, setproducts] = useState([])
+    const [ productos ,setproducts] = useState([])
 
 
 
@@ -17,7 +18,7 @@ const ItemListContainer = ({greeting}) => {
         const obtenerproductos = new Promise ((accept, reject)=> {
             setTimeout(()=> {
                 accept(products)
-            }, 50000);
+            },);
         })
 
         try {
@@ -26,9 +27,8 @@ const ItemListContainer = ({greeting}) => {
         } catch (error) {
             console.log(error);
         }
-
         })()
-        })
+        })  
     console.log(products);
     
     const agregarAlCarrito = (cantidad) => {
@@ -38,9 +38,9 @@ const ItemListContainer = ({greeting}) => {
 
     return (
         <div className="Item-List-Container">
-            <h1>{greeting}</h1>
-            <ItemCount initial={1} stock={8} onAdd={agregarAlCarrito}/>
-            <ItemList productos={products}/>
+            <h1 className="titulo">Bienvenido a Nike AR</h1>
+            <ItemCount initial={1} stock={10} onAdd={agregarAlCarrito}/>
+            <ItemList products={productos}/>
         </div>
     )
 }

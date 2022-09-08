@@ -6,7 +6,7 @@ import './style.css';
     const [count, setCount] = useState(initial);
 
     const handleAdd = () => {
-        if(count< stock) {
+        if(count < stock) {
             setCount(count+1);
         } else{
             alert("no hay suficiente stock");
@@ -14,7 +14,7 @@ import './style.css';
     }
 
     const handleDecrement = () => {
-        if (count> stock) {
+        if (count > stock) {
             setCount(count-1);
         }
     }

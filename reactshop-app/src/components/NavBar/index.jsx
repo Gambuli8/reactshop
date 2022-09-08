@@ -12,8 +12,8 @@ const NavBar = () => {
     //nombre de estado 
     const [navColor, setNavColor] = useState("white")
 
-    const onChangeColor = (Event) => {
-        const Color = Event.target.value;
+    const onChangeColor = (event) => {
+        const Color = event.target.value;
         setNavColor(Color)
     }
     console.log(navColor);
@@ -26,7 +26,7 @@ const NavBar = () => {
                 backgroundColor: navColor
             }}>
                 <CartWidget/>
-            <Select handlecolor={onChangeColor} />
+            <Select handlecolor={onChangeColor}/>
                 <li className="lista">
                     <Link to="/" className="palabra">HOME</Link>
                 </li>
