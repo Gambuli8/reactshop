@@ -29,11 +29,11 @@ import './style.css';
     }, [count]);
 
     return (
-    <div>  
+    <div id='botones'>  
         <button id='menos' onClick={handleDecrement}>-</button>
         <h2>{count}</h2>
         <button id='mas' onClick={handleAdd}>+</button>
-        <button onClick={addCart}>agregar al carrito</button>
+        <button id='agregar' onClick={addCart}>agregar al carrito</button>
     </div>
     );
 };

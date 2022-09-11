@@ -1,17 +1,42 @@
-.card{
-    border: 2px solid gray;
-    margin: 30px;
-    cursor: pointer;
-    width: 300px;
-    height: 300px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img{
-    margin: 10px;
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.card{
+    border: 2px solid gray;
+    margin: 20px;
+    cursor: pointer;
+    width: 890px;
+    height: 550px;
+    padding: 10px;
+}
+
+.imagen{
+    height: 70px;
+    width: 30%;
+}
+
+#name{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 40px;
+    width: 100%;
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+#descripcion{
+    font-size: 20px;
+    text-align: right;
+    height: 70px;
+    width: 100%;
+}
+
+.precio{
+    text-align: right;
+    width: 30%;
+    height: 70px;
+
 }

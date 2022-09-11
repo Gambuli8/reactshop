@@ -2,19 +2,23 @@ import React from 'react';
 import './styles.css';
 import 'bootstrap';
 import remerajordan from '../../img/remerajordan.jpg';
-import airtrainer1 from '../../img/airtrainer1.jpg';
-import airforce1mid from '../../img/airforce1mid.jpg';
-import nikebillie from '../../img/pantalonnikexbillie.jpg';
+import ItemCount from '../ItemCount';
 
 const Item = ({product})=> {
   return (
-    <div>
       <div className='card'>
-        <img src= {remerajordan} alt="product"/>
-        {product.name}
+        <div id='name'>{product.name}</div>
+        <br />
+        <div id='descripcion'>{product.description}</div>
+        <br />
+        <img src={remerajordan} alt="remera" width={200} height={200} />
+        <br />
+        <div id='precio'>{product.precio}</div>
+        <br />
+        <ItemCount initial={1} stock={10}/>
+        <br />
       </div>
-    </div>
   )
 }
 
-export default Item
+export default Item;

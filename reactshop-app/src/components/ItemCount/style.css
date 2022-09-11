@@ -1,11 +1,17 @@
+#botones{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 50%;
+}
 
 #mas{
     width: 50px;
+    margin: 5px;
 }
 
 #menos{
     width: 50px;
-    display: flex;
     align-items: center;
-    
+    margin: 5px;
 }

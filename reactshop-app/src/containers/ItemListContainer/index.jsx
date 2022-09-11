@@ -39,7 +39,6 @@ const ItemListContainer = ({greeting}) => {
     return (
         <div className="Item-List-Container">
             <h1 className="titulo">Bienvenido a Nike AR</h1>
-            <ItemCount initial={1} stock={10} onAdd={agregarAlCarrito}/>
             <ItemList products={productos}/>
         </div>
     )
