@@ -41,3 +41,13 @@ ul {
     width: 60px;
     margin: 7px;
 }
+
+.buscador{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+}

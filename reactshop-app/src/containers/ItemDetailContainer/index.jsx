@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
-import products from "../../data/productos";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState({})
@@ -12,11 +11,9 @@ const ItemDetailContainer = () => {
     
     //Gestionar la obtención de la data del detalle
     useEffect(()=> {
-
-
         const getProducts = async () => {
             try {
-                const response = await products;
+                const response = await fetch('https://fakestoreapi.com/products/1');
                 const data = await response.json();
                 setProductDetail(data);
             } catch (error) {
@@ -29,7 +26,7 @@ const ItemDetailContainer = () => {
 
     console.log(productDetail);
 
-    return <ItemDetail product={productDetail}/>;
+    return <ItemDetail product={productDetail}/>
 };
 
 export default ItemDetailContainer;

@@ -1,10 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import ItemCount from "../../components/ItemCount";
-import ItemList from "../../components/ItemList";
 import './styles.css';
-import products from "../../data/productos";
 import { useEffect } from "react";
+import ItemList from "../../components/ItemList";
 
 
 const ItemListContainer = ({greeting}) => {
@@ -15,26 +13,22 @@ const ItemListContainer = ({greeting}) => {
 
     useEffect(() => {
         ( async()=> {
-        const obtenerproductos = new Promise ((accept, reject)=> {
-            setTimeout(()=> {
-                accept(products)
-            },);
-        })
-
         try {
-            const response = await obtenerproductos;
-            setproducts(response);
+            const response = await fetch("https://fakestoreapi.com/products");
+            const productos = await response.json();
+            setproducts(productos);
         } catch (error) {
             console.log(error);
         }
-        })()
-        })  
-    console.log(products);
+    })()
+    }, 10000) 
+
+    console.log(productos);
     
-    const agregarAlCarrito = (cantidad) => {
-        console.log(cantidad);
-        console.log(`Se agregó la cantidad ${cantidad} al carrito!`);
-    }
+    //const agregarAlCarrito = (cantidad) => {
+      //  console.log(cantidad);
+        //console.log(`Se agregó la cantidad ${cantidad} al carrito!`);
+    //}
 
     return (
         <div className="Item-List-Container">

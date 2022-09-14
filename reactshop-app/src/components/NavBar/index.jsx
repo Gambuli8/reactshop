@@ -27,20 +27,21 @@ const NavBar = () => {
             }}>
                 <CartWidget/>
             <Select handlecolor={onChangeColor}/>
-                <li className="lista">
-                    <Link to="/" className="palabra">HOME</Link>
-                </li>
-                <li className="lista">
-                    <Link to="/category" className="palabra">CATEGORIAS</Link>
-                </li>
+                <input type="text" className='buscador' placeholder='Buscar'/>
                 <li className="lista">
                     <Link to="/category/Marcas" className="palabra">MARCA</Link>
+                </li>
+                <li className="lista">
+                    <Link to="/category/Mujer" className="palabra">MUJER</Link>
                 </li>
                 <li className="lista">
                     <Link to="/category/Hombre" className="palabra">HOMBRE</Link>
                 </li>
                 <li className="lista">
-                    <Link to="/category/Mujer" className="palabra">MUJER</Link>
+                    <Link to="/category" className="palabra">CATEGORIAS</Link>
+                </li>
+                <li className="lista">
+                    <Link to="/" className="palabra">HOME</Link>
                 </li>
             </ul>
             </nav>

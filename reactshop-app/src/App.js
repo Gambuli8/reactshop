@@ -1,13 +1,8 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemDetailConteiner from './components/ItemDetail'
+import ItemDetailConteiner from './components/ItemDetail';
 import ItemListContainer from './containers/ItemListContainer';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import NotFound from './components/NotFound';
+import { BrowserRouter } from 'react-router-dom';
 
 
 function App() {
@@ -16,12 +11,12 @@ function App() {
 
   return (
     <BrowserRouter>
-    <NavBar 
-    categorias={categorias} />
-    <ItemListContainer greeting={"Hola Bienvenido a Nike"}/>
-    <Routes/>
+    <NavBar categorias={categorias} /> 
+    <ItemListContainer greeting={"Hola Bienvenido a Nike"} /> 
+    
+    <ItemDetailConteiner/>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

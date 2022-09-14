@@ -4,39 +4,54 @@
     box-sizing: border-box;
 }
 
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .card{
     border: 2px solid gray;
-    margin: 20px;
+    margin: 30px;
     cursor: pointer;
-    width: 890px;
-    height: 550px;
+    width: 460px;
+    height: 650px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
 }
 
-.imagen{
-    height: 70px;
-    width: 30%;
+#imagen{
+    margin: 20px;
+    height: 230px;
+    width: 230px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 #name{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-family: fantasy;
     height: 40px;
     width: 100%;
-    text-align: right;
+    text-align: center;
     padding-right: 50px;
     padding-top: 10px;
 }
 
 #descripcion{
     font-size: 20px;
-    text-align: right;
     height: 70px;
     width: 100%;
 }
 
-.precio{
-    text-align: right;
-    width: 30%;
+#precio{
+    text-align: end;
+    align-items: center;
+    justify-content: end;
+    width: 70px;
     height: 70px;
 
 }

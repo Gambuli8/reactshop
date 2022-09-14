@@ -1,23 +1,22 @@
 import React from 'react';
 import './styles.css';
 import 'bootstrap';
-import remerajordan from '../../img/remerajordan.jpg';
 import ItemCount from '../ItemCount';
 
 const Item = ({product})=> {
   return (
+    <div className='cards'>
       <div className='card'>
-        <div id='name'>{product.name}</div>
+        <div id='name'>{product.title}</div>
+        <br />
+        <img id='imagen' src={product.image} alt="remera"/>
         <br />
         <div id='descripcion'>{product.description}</div>
         <br />
-        <img src={remerajordan} alt="remera" width={200} height={200} />
         <br />
-        <div id='precio'>{product.precio}</div>
-        <br />
-        <ItemCount initial={1} stock={10}/>
-        <br />
+        <div id='precio'>${product.price} </div>
       </div>
+    </div>
   )
 }
 

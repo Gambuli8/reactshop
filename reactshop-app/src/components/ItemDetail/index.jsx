@@ -1,13 +1,14 @@
-import React from 'react'
-import products from '../../data/productos'
-import ItemCount from '../ItemCount'
+import React from 'react';
+import ItemCount from '../ItemCount';
 
-const ItemDetail = ({products}) => {
+const ItemDetail = ({product}) => {
+
   return (
     <div>
-        <h1>{products.name}</h1>
-        <img src={products.id} alt="product-detail"/>
-        <ItemCount/>
+        <h1>detalle del producto</h1>
+        <image src={product} alt="imagen" />
+        <p>{product}</p>
+          <ItemCount initial={1} stock={10} />
     </div>
   )
 }
