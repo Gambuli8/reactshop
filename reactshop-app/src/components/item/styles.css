@@ -1,15 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-.cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
 .card{
+    display: flex;
+    flex-direction: column;
     border: 2px solid gray;
     margin: 30px;
     cursor: pointer;

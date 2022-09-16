@@ -1,41 +1,26 @@
 //rafce => funcion flecha
 import React from 'react';
-import { useState } from 'react';
 import CartWidget from '../CartWidget';
 import './stilo.css';
-import Select from '../seleccionar';
 import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
-    
-    //nombre de estado 
-    const [navColor, setNavColor] = useState("white")
-
-    const onChangeColor = (event) => {
-        const Color = event.target.value;
-        setNavColor(Color)
-    }
-    console.log(navColor);
-
     return (
         <>
         <div>
             <nav className="navbar">
-            <ul style={{
-                backgroundColor: navColor
-            }}>
+            <ul>
                 <CartWidget/>
-            <Select handlecolor={onChangeColor}/>
                 <input type="text" className='buscador' placeholder='Buscar'/>
                 <li className="lista">
-                    <Link to="/category/Marcas" className="palabra">MARCA</Link>
+                    <Link to="/category/electronincs" className="palabra">Electronica</Link>
                 </li>
                 <li className="lista">
-                    <Link to="/category/Mujer" className="palabra">MUJER</Link>
+                    <Link to="/category/Women's clothing" className="palabra">MUJER</Link>
                 </li>
                 <li className="lista">
-                    <Link to="/category/Hombre" className="palabra">HOMBRE</Link>
+                    <Link to="/category/men's clothing" className="palabra">HOMBRE</Link>
                 </li>
                 <li className="lista">
                     <Link to="/category" className="palabra">CATEGORIAS</Link>

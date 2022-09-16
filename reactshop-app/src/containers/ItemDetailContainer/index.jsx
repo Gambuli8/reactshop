@@ -5,15 +5,15 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState({})
 
-    const {productodId} = useParams();
+    const {productId} = useParams();
 
-    console.log(productoId);
+    console.log(productId);
     
     //Gestionar la obtención de la data del detalle
     useEffect(()=> {
         const getProducts = async () => {
             try {
-                const response = await fetch('https://fakestoreapi.com/products/1');
+                const response = await fetch(`https://fakestoreapi.com/products/${productId}`);
                 const data = await response.json();
                 setProductDetail(data);
             } catch (error) {
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
         }
         getProducts();
 
-    }, [])
+    }, [productId])
 
     console.log(productDetail);
 
