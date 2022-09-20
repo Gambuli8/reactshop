@@ -14,10 +14,10 @@ const NavBar = () => {
                 <CartWidget/>
                 <input type="text" className='buscador' placeholder='Buscar'/>
                 <li className="lista">
-                    <Link to="/category/electronincs" className="palabra">Electronica</Link>
+                    <Link to="/category/electronics" className="palabra">Electronica</Link>
                 </li>
                 <li className="lista">
-                    <Link to="/category/Women's clothing" className="palabra">MUJER</Link>
+                    <Link to="/category/women's clothing" className="palabra">MUJER</Link>
                 </li>
                 <li className="lista">
                     <Link to="/category/men's clothing" className="palabra">HOMBRE</Link>

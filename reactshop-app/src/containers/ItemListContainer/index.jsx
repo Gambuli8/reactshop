@@ -31,7 +31,7 @@ const ItemListContainer = ({greeting}) => {
             console.log(error);
         }
     })()
-    },10000 [categoryId]) 
+    }, [categoryId]) 
 
     console.log(productos);
     
