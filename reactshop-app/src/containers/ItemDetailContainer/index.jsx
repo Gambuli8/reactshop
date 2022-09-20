@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../../components/ItemDetail";
 import { useParams } from "react-router-dom";
-import ItemCount from "../../components/ItemCount";
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState({})
@@ -9,10 +8,6 @@ const ItemDetailContainer = () => {
     const {productId} = useParams();
 
     console.log(productId);
-
-    const agregarAlCarrito = (cantidad) => {
-        console.log(`Se agregaron ${cantidad} productos al carrito!`);
-        }
 
     //Gestionar la obtención de la data del detalle
     useEffect(()=> {
@@ -31,13 +26,7 @@ const ItemDetailContainer = () => {
 
     console.log(productDetail);
 
-    return (
-        <div>
-            <ItemDetail product={productDetail}/>
-        <ItemCount initial={1} stock={10} onAdd={agregarAlCarrito}/>
-        </div>
-
-    )
+    return <ItemDetail product={productDetail}/>
 };
 
 export default ItemDetailContainer;
