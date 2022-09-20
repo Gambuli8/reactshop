@@ -6,12 +6,9 @@ const ItemDetail = ({product}) => {
 
   return (
     <div className='detail-container'>
-        <h1>detalle del producto</h1>
-        <img src={product.image} alt="imagen" />
-        <div className='detail-subcontainer'>
-        <p>{product.title}</p>
-        </div>
-          <ItemCount initial={1} stock={10} />
+        <h1 className='titulo-producto'>{product.title}</h1>
+        <img className='imagen' src={product.image} alt="imagen" />
+        <p className='descripcion'>{product.description}</p>
     </div>
   )
 }

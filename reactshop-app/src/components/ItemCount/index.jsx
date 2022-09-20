@@ -14,9 +14,7 @@ import './style.css';
     }
 
     const handleDecrement = () => {
-        if (count > stock) {
-            setCount(count-1);
-        }
+        setCount(count - 1);
     }
 
     const addCart = () => {
@@ -30,9 +28,10 @@ import './style.css';
 
     return (
     <div id='botones'>  
-        <button id='menos' onClick={handleDecrement}>-</button>
         <h2>{count}</h2>
+        <button id='menos' onClick={handleDecrement}>-</button>
         <button id='mas' onClick={handleAdd}>+</button>
+        <br />
         <button id='agregar' onClick={addCart}>agregar al carrito</button>
     </div>
     );

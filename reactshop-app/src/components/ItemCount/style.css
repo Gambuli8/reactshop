@@ -1,17 +1,49 @@
 #botones{
-    display: block;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 10px;
     width: 50%;
 }
 
 #mas{
-    width: 50px;
-    margin: 5px;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+}
+
+#mas:hover{
+    transform: scale(1.1);
+    transition: all 1s ease;
+    background-color: deepskyblue;
+    border: none;
 }
 
 #menos{
-    width: 50px;
+    width: 100px;
+    height: 30px;
     align-items: center;
-    margin: 5px;
+    margin: 10px;
+}
+
+#menos:hover{
+    transform: scale(1.1);
+    transition: all 1s ease;
+    background-color: red;
+    border: none;
+}
+
+#agregar{
+    width: 120px;
+    height: 40px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+}
+
+#agregar:hover{
+    transform: scale(1.1);
+    transition: all 1s ease;
+    background-color: green;
+    border: none;
 }
