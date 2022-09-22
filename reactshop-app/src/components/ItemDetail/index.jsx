@@ -1,22 +1,29 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ItemCount from '../ItemCount';
 import './stilo.css';
+import Shop from '../../Context/ShopProvider';
 
 const ItemDetail = ({product}) => {
 
   const [quantity, setquantity] = useState(0);
   const navigate = useNavigate();
 
-  const addCart = (quantity) => {
+  const {AddItem} = useContext(Shop);
 
-    setquantity(quantity);
+  const addCart = (qty) => {
+    setquantity(qty);
   };
 
     const handleFinish = () => {
+      const producttosave = {...product, qty: quantity}
+      AddItem(producttosave)
       navigate('/cart');
-  }
+  };
+
+  console.log(quantity);
 
 
   return (
