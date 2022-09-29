@@ -12,7 +12,7 @@ const ItemListContainer = ({greeting}) => {
 
     const {categoryId} = useParams();
 
-    console.log(categoryId);
+    //console.log(categoryId);
 
     useEffect(() => {
         (async ()=> {
@@ -34,11 +34,6 @@ const ItemListContainer = ({greeting}) => {
     }, [categoryId]) 
 
     console.log(productos);
-    
-    //const agregarAlCarrito = (cantidad) => {
-        //console.log(cantidad);
-        //console.log(`Se agregó la cantidad ${cantidad} al carrito!`);
-    //}
 
     return (
         <div className="Item-List-Container">
