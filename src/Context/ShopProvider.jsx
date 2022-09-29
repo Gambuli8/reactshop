@@ -9,12 +9,13 @@ const ShopProvider = ({Children}) => {
     const [cart, setcart] = useState([])
 
     const AddItem = (item) => {
+
         const productrepetido = isInCart(item.id);
         console.log(productrepetido);
         if (productrepetido) {
             const cartmodifed = cart.map(product => {
                 if (product.id === item.id) {
-                    product.qty += item.qty
+                    product.qty += product.qty
                     return product
                 }
                 return product
@@ -24,6 +25,10 @@ const ShopProvider = ({Children}) => {
             const cartmodificado = [...cart, item]
             setcart(cartmodificado)
         }
+    }
+    
+    const isInCart = (id) => {
+        return cart.some(product => product.id === id)
     }
 
     const removerItem = (item) => {
@@ -38,12 +43,8 @@ const ShopProvider = ({Children}) => {
         }
     }
 
-    const isInCart = (id) => {
-        return cart.some(product => product.id === id)
-    }
-
     return (
-        <ShopProvider value={{ cart, AddItem}}>
+        <ShopProvider value={{ cart, AddItem, removerItem}}>
         {Children}
         </ShopProvider>
     )
