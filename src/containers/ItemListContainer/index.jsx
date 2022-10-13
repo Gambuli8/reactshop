@@ -30,6 +30,7 @@ const ItemListContainer = ({greeting}) => {
             console.log(doc.id, " => ", doc.data());
             productosfirebase.push({ id: doc.id, ...doc.data()})
         });
+
             setproducts(productosfirebase)
         } catch (error) {
             console.log(error);
